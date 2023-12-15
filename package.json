@@ -1,0 +1,18 @@
+{
+  "name": "dfx",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/ui",
+    "packages/wrapper",
+    "packages/my-application"
+  ],
+  "scripts": {
+    "build": "npm --workspaces run build --if-present",
+    "clear": "npm --workspaces run clear --if-present",
+    "test": "npm --workspaces run test --if-present"
+  },
+  "author": "",
+  "license": "MIT"
+}

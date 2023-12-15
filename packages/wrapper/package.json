@@ -1,0 +1,30 @@
+{
+  "name": "@my/wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper for my ui library",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/wrapper.js",
+      "require": "./dist/wrapper.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json  && vite build --outDir dist --emptyOutDir",
+    "clear": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@my/ui": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.9",
+    "vite-plugin-dts": "^3.6.4"
+  },
+  "author": "jason.santos@rangle.io",
+  "license": "ISC"
+}
